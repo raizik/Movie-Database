@@ -7,6 +7,12 @@
   pointer-events: none;
 }
 
+.App-title {
+  font-size: 3em;
+  color: black;
+  font-style: italic;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -14,14 +20,14 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-image: url("popcorn.jpg");
+  min-height: 5vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
 }
 
 .App-link {
@@ -35,4 +41,59 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  background-color: darkslategray;
+  background-image: url("./popcorn.jpg");
+}
+.bgimg {
+  background-image: url('./popcorn.jpg');
+}
+
+.form__button {
+  border: solid 2px #2c3e50;
+  background: papayawhip;
+  padding: 0.2rem 0.9rem;
+  margin: 0 0.2rem;
+  border-radius: 1px;
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 500;
+  margin-left: 0.7rem;
+}
+
+.form__input {
+  background: transparent;
+  border: 0;
+  border-bottom: solid 2px #2c3e50;
+  margin-right: 10px;
+  letter-spacing: 2px;
+  width: 10%;
+  padding: 0.4rem;
+}
+
+.movie__box {
+  background: transparent;
+  padding-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: -1px 2px 34px -13px rgba(0,0,0,0.75);
+  text-align: center;
+  overflow: hidden;
+}
+.movie__text {
+  margin-left: 15px;
+}
+
+.movie_buttons {
+  border: solid 2px;
+  border-color: papayawhip;
+  background: chocolate;
+  padding: 0.4rem 0.6rem;
+  margin: 0 0.2rem;
+  border-radius: 1px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-left: 0.7rem;
 }
