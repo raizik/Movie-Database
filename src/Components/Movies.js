@@ -10,12 +10,13 @@ const Movies = props => (
                             <div>
                                 <img className="movie__box-img" src= {"https://image.tmdb.org/t/p/w185_and_h278_bestv2/" + movie.poster_path} alt={ movie.original_title } />
                                 <div className="movie__text">
-                                    <h5 className="card-title">{movie.title}</h5>
-                                    <p className="card-subtitle">Popularity rate: <span>
+                                    <h5 className="movie__title">
+                                        {movie.title.length < 20 ? `${ movie.title }` : `${movie.title.substring(0, 25)}...`}</h5>
+                                    <p className="movie__subtitle">Popularity rate: <span>
                                         {movie.popularity}
                                     </span></p>
                                 </div>
-                                <button className="movie_buttons">Show Overview</button>
+                                <button className="movie_buttons">Show More</button>
                             </div>
                         </div>
                     </div>

@@ -53,7 +53,7 @@ body {
 
 .form__button {
   border: solid 2px #2c3e50;
-  background: papayawhip;
+  background: palegoldenrod;
   padding: 0.2rem 0.9rem;
   margin: 0 0.2rem;
   border-radius: 1px;
@@ -86,9 +86,8 @@ body {
 }
 
 .movie_buttons {
-  border: solid 2px;
-  border-color: papayawhip;
-  background: chocolate;
+  border: solid 2px papayawhip;
+  background: darkgoldenrod;
   padding: 0.4rem 0.6rem;
   margin: 0 0.2rem;
   border-radius: 1px;
@@ -96,4 +95,18 @@ body {
   text-transform: uppercase;
   font-weight: 500;
   margin-left: 0.7rem;
+}
+
+.movie__title {
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  padding: 1.8rem 0 0.2rem 0;
+}
+
+.movie__subtitle {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
 }
