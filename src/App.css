@@ -110,3 +110,12 @@ body {
   font-size: 0.8rem;
   letter-spacing: 2px;
 }
+
+.active-movie__overview {
+  background: papayawhip;
+}
+
+.active-movie__genres {
+  color: black;
+
+}

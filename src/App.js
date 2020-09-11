@@ -18,6 +18,19 @@ class App extends Component {
         this.setState({ movies: data.results })
         console.log(this.state.movies)
     }
+    /*shouldComponentUpdate = () => {
+        return false;
+    }*/
+
+    componentDidMount = () => {
+        const json = localStorage.getItem("movies");
+        const movies = JSON.parse(json);
+        this.setState({ movies })
+    }
+    componentDidUpdate = () => {
+        const movies = JSON.stringify(this.state.movies);
+        localStorage.setItem("movies", movies);
+    }
     render() {
         return (
             <div className="App">
