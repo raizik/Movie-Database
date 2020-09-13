@@ -10,7 +10,13 @@
 .App-title {
   font-size: 3em;
   color: black;
-  font-style: italic;
+  font-style: normal;
+  font-family: fantasy;
+  background: goldenrod;
+  border-radius: 25px;
+  padding: 5px;
+  width: 190px;
+  height: 90px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -55,12 +61,11 @@ body {
   border: solid 2px #2c3e50;
   background: palegoldenrod;
   padding: 0.2rem 0.9rem;
-  margin: 0 0.2rem;
   border-radius: 1px;
   font-size: 1rem;
   text-transform: capitalize;
   font-weight: 500;
-  margin-left: 0.7rem;
+  margin: 0 0.2rem 0 0.7rem;
 }
 
 .form__input {
@@ -89,12 +94,11 @@ body {
   border: solid 2px papayawhip;
   background: darkgoldenrod;
   padding: 0.4rem 0.6rem;
-  margin: 0 0.2rem;
   border-radius: 1px;
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 500;
-  margin-left: 0.7rem;
+  margin: 0 0.2rem 0 0.7rem;
 }
 
 .movie__title {
@@ -118,4 +122,20 @@ body {
 .active-movie__genres {
   color: black;
 
+}
+
+.react-dropdown {
+  border: solid 2px #2c3e50;
+  background: lightgoldenrodyellow;
+  padding: 0.1rem 0.1rem;
+  alignment: center;
+  text-align: left;
+  border-radius: 1px;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.dropdown {
+  align-items: center;
 }
