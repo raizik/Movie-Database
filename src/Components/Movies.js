@@ -9,7 +9,8 @@ const Movies = props => (
                     <div key={movie.id} className="col-md-4" style={{ marginBottom: "2rem" }}>
                         <div className="movie__box">
                             <div>
-                                <img className="movie__box-img" src= {"https://image.tmdb.org/t/p/w185_and_h278_bestv2/" + movie.poster_path} alt={ movie.original_title } />
+                                <img className="movie__box-img" src= {"https://image.tmdb.org/t/p/w185_and_h278_bestv2/" + movie.poster_path}
+                                     alt={ movie.original_title } />
                                 <div className="movie__text">
                                     <h5 className="movie__title">
                                         {movie.title.length < 20 ? `${ movie.title }` : `${movie.title.substring(0, 25)}...`}</h5>

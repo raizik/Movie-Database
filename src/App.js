@@ -3,6 +3,8 @@ import './App.css';
 
 import Form from "./Components/From";
 import Movies from "./Components/Movies"
+import {Link} from "react-router-dom";
+import {Button} from "react-bootstrap";
 
 const API_KEY = "6d4c4cb1f758aaee493e26f4efadc354"
 
@@ -33,13 +35,16 @@ class App extends Component {
         console.log("selectedCat: ", this.state.selectedCat);
     }
     componentDidMount = () => {
-        const json = localStorage.getItem("movies");
-        const movies = JSON.parse(json);
-        this.setState({ movies : movies, category: ['year', 'keyword']})
+        const json_movies = localStorage.getItem("movies");
+        const movies = JSON.parse(json_movies);
+        const selected = localStorage.getItem("selectedCat");
+        this.setState({ movies : movies, category: ['year', 'keyword'], selectedCat: selected})
     }
     componentDidUpdate = () => {
         const movies = JSON.stringify(this.state.movies);
+        const cat = this.state.selectedCat;
         localStorage.setItem("movies", movies);
+        localStorage.setItem("selectedCat", cat);
     }
     /*clear() {
         this.setState({ movies: [] })
@@ -48,11 +53,12 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <header className="App-header">
-                    <h1 className="App-title">RMDb</h1>
-                </header>
+                <button className="movie_buttons">
+                    <Link to="/">Go Home</Link>
+                </button>
                 <Form getMovie={this.getMovieByCat} selectedCat={this.state.selectedCat} handleOnChange={this.handleOnChange}/>
                 <Movies movies={this.state.movies}/>
+
             </div>
         );
     }

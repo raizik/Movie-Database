@@ -33,13 +33,11 @@ class Movie extends React.Component {
                             Overview: <span> <h5 className="active-movie__overview" align="center">{ movie.overview }</h5></span>
                         </h4>
                         <h4 className="active-movie__genres_title">
-                            Genres: <span> <h5 className="active-movie__genres">{movie.genres.map(function(d, idx){
-                            return (<li key={idx}>{d.name}</li>)
-                        })}
+                            Genres: <span> <h5 className="active-movie__genres" onLoad={() => this.props.genresList()}>
                         </h5></span>
                         </h4>
                         <button className="movie_buttons">
-                            <Link to="/">Go Home</Link>
+                            <Link to="/search">Go Back</Link>
                         </button>
                     </div>
                 }
