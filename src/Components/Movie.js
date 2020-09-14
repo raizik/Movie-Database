@@ -19,9 +19,18 @@ class Movie extends React.Component {
     /*this.setState({ activeMovie: data.results })
     console.log(this.state.activeMovie)*/
     }
+    genresList = async () => {
+        const genres = this.state.activeMovie.genres;
+        console.log(genres)
+        genres.map(function(d, idx){
+            return (<li key={idx}>{d.name}</li>)
+        })
+
+    }
     render() {
-        console.log(this.props);
         const movie = this.state.activeMovie;
+        //const listItems = movie.genres.map((d) => <li key={d.name}>{d.name}</li>);
+
         return (
             <div className="container">
                 {
@@ -33,11 +42,16 @@ class Movie extends React.Component {
                             Overview: <span> <h5 className="active-movie__overview" align="center">{ movie.overview }</h5></span>
                         </h4>
                         <h4 className="active-movie__genres_title">
-                            Genres: <span> <h5 className="active-movie__genres" onLoad={() => this.props.genresList()}>
+                            Genres: <span> <h5 className="active-movie__genres">
+                            {
+                                movie.genres.map(function(d, idx){
+                                    return (<li key={idx}>{d.name}</li>)
+                                })
+                            }
                         </h5></span>
                         </h4>
                         <button className="movie_buttons">
-                            <Link to="/search">Go Back</Link>
+                            <Link to="/search">Go Home</Link>
                         </button>
                     </div>
                 }

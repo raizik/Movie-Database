@@ -19,7 +19,7 @@ const Movies = props => (
                                     </span></p>
                                 </div>
                                 <button className="movie_buttons" >
-                                    <Link to={{ pathname: `/movie/${movie.id}`, state: { movie: movie.title, id: movie.id } }}>
+                                    <Link to={{ pathname: `/movie/${movie.id}`, state: { movie: movie.title, id: movie.id }}}>
                                         Show More
                                     </Link>
                                 </button>

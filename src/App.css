@@ -115,8 +115,15 @@ body {
   letter-spacing: 2px;
 }
 
-.active-movie__overview {
-  background: papayawhip;
+/*Active movie styles*/
+
+.active-movie__title {
+  font-style: italic;
+  color: black;
+}
+
+.active-movie__text {
+  color: black;
 }
 
 .active-movie__genres {

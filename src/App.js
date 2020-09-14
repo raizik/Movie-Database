@@ -4,7 +4,6 @@ import './App.css';
 import Form from "./Components/From";
 import Movies from "./Components/Movies"
 import {Link} from "react-router-dom";
-import {Button} from "react-bootstrap";
 
 const API_KEY = "6d4c4cb1f758aaee493e26f4efadc354"
 
