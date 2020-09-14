@@ -19,9 +19,8 @@ class Movie extends React.Component {
     /*this.setState({ activeMovie: data.results })
     console.log(this.state.activeMovie)*/
     }
-    genresList = async () => {
+    genresList() {
         const genres = this.state.activeMovie.genres;
-        console.log(genres)
         genres.map(function(d, idx){
             return (<li key={idx}>{d.name}</li>)
         })
@@ -38,18 +37,17 @@ class Movie extends React.Component {
                     <div className="active-movie">
                         <img className="container" src= {"https://image.tmdb.org/t/p/original/" + movie.backdrop_path} alt={ movie.original_title } />
                         <h3 align="center" className="active-movie__title">{ movie.original_title }</h3>
-                        <h4 className="active-movie__overview_title">
-                            Overview: <span> <h5 className="active-movie__overview" align="center">{ movie.overview }</h5></span>
-                        </h4>
-                        <h4 className="active-movie__genres_title">
-                            Genres: <span> <h5 className="active-movie__genres">
-                            {
-                                movie.genres.map(function(d, idx){
-                                    return (<li key={idx}>{d.name}</li>)
-                                })
-                            }
-                        </h5></span>
-                        </h4>
+                        <h4 className="active-movie__title">Tagline: { movie.tagline }</h4>
+                        <h4 className="active-movie__title">Vote Average: { movie.vote_average }</h4>
+                        <h4 className="active-movie__title">Overview: </h4>
+                        <span> <h5 className="active-movie__text" align="center">{ movie.overview }</h5></span>
+                        <h4 className="active-movie__title">Genres: </h4>
+                        <h5 className="active-movie__text">{
+                            movie.genres.map(function(d, idx){
+                            return (<li key={idx}>{d.name}</li>)
+                        })
+                        }
+                        </h5>
                         <button className="movie_buttons">
                             <Link to="/search">Go Home</Link>
                         </button>
